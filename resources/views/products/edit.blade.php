@@ -45,9 +45,12 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Category:</strong>
-                    <input type="number" name="category_qty" class="form-control" style="height: 150px"
-                           value="{{ $product->category_id }}" placeholder="Category">
+                    <select class="form-control" name="category_id">
+                        <option>Category</option>
+                        @foreach($categories as $category)
+                            <option value="{{$category->id}}">{{$category->category_name}}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
