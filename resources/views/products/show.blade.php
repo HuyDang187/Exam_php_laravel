@@ -12,7 +12,7 @@
         <div class="col-xs-12 col-sm-12 col-md12">
             <div class="form-group">
                 <strong>Category : </strong>
-                {{ $product->category_id }}
+                {{$product->categories->category_name}}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md12">
